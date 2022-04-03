@@ -47,6 +47,7 @@ export class XmatMessageDialogComponent implements OnInit {
       [MessageDialogTypes[MessageDialogTypes.info]]: 'i',
     },
     type: '',
+    action: '',
   };
 
   /**
@@ -67,6 +68,9 @@ export class XmatMessageDialogComponent implements OnInit {
       typePlaceHolder,
       this.md.type
     );
+    this.md.action = this.data.action;
+    console.log(this.md.type);
+    console.log(this.md.action);
   }
 
   onActionClick(action): void {
